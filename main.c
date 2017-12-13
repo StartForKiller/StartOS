@@ -54,6 +54,7 @@ int main() {
         gdt_install();
         idt_install();
         isrs_install();
+        irq_install();
         init_video();
         puts("Hola mundo!\n");
         for(;;);
