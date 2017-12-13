@@ -51,7 +51,8 @@ outportb(unsigned short _port, unsigned char _data) {
 }
 
 int main() {
+        gdt_install();
         init_video();
         puts("Hola mundo!\n");
-        while(true);
+        while(1);
 }
