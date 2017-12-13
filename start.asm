@@ -41,6 +41,13 @@ gdt_flush:
 flush2:
 		ret
 
+; IDT
+global idt_load
+extern idtp
+idt_load:
+		lidt [idtp]
+		ret
+
 SECTION .bss
 
 _sys_stack:
